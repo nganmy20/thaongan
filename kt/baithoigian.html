@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đồng hồ</title>
+<style>
+.clock {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  padding: 50px;
+  border: 2px solid black;
+  border-radius: 1px;
+  color: white;
+  background-color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="clock" id="clock"></div>
+
+<script>
+function updateClock() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
+  document.getElementById('clock').innerHTML = hours + ':' + 
+    (minutes < 10 ? '0' : '') + minutes + ':' + 
+    (seconds < 10 ? '0' : '') + seconds + ' ' + ampm;
+}
+
+// Cập nhật đồng hồ mỗi giây
+setInterval(updateClock, 1000);
+
+// Chạy một lần khi trang được tải lên để hiển thị ngay lúc đầu
+updateClock();
+</script>
+
+</body>
+</html>

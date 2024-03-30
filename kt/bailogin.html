@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arrial Narrow, sans-serif;
+        }
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: white;
+            color: gray;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+       button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: 2px solid white; 
+        background-color: #33CCCC; 
+        color: #555555; 
+        border-radius: 6px; 
+    }
+      .frame {
+  background-color:#FFCCCC; 
+  width: 300px; 
+  height: 400px;  
+  padding: 40px; 
+  margin: 40px; 
+}
+    </style>
+</head>
+<body>
+<span style="font-size: 16px; color: red; font-weight: bold">Bài 6.</span>
+<div class="frame">
+  <form action="">
+  <div style="text-align: center">
+  <h1>Log In</h1>
+  </div>
+<div style="text-align: center">
+  <p style="color:#777777; font-size: 14px; ">
+  Login here using your usename and password
+  </p>
+  </div>
+<form action="/login" method="post">
+    <div>
+        
+        <input type="text" placeholder="Username" name="username" required>
+    </div>
+    <div>
+    
+        <input type="password" placeholder="Password" name="password" required>
+    </div>
+    <div >
+        <input type="submit" value="Log In">
+    </div>
+  <div style="text-align: right">
+  <button class="button"> Sign Up
+    <img width="18" src="https://cdn.glitch.global/76a58bb3-56bc-4b1d-852d-59ab29102f38/sign%20up?v=1710068142114"/>
+  </button>
+  </div>
+</form>
+  </form>
+  </div>
+</body>
+</html>

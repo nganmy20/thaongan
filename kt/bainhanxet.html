@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Khung Đánh Giá Bình Luận</title>
+<style>
+  .review-box {
+    width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+
+  .review-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .review-form {
+    margin-top: 20px;
+  }
+
+  .review-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .review-form input[type="text"],
+  .review-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .review-form textarea {
+    height: 100px;
+  }
+
+  .review-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+
+  .review-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="review-box">
+  <h2>Đánh Giá Bình Luận</h2>
+  <form class="review-form" action="#" method="post">
+    <label for="name">Tên:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="date">Ngày:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="rating">Đánh Giá:</label>
+    <select id="rating" name="rating" required>
+      <option value="">Chọn Đánh Giá</option>
+      <option value="5">5 Sao - Rất Tuyệt Vời</option>
+      <option value="4">4 Sao - Tốt</option>
+      <option value="3">3 Sao - Bình Thường</option>
+      <option value="2">2 Sao - Không Tốt</option>
+      <option value="1">1 Sao - Rất Tệ</option>
+    </select>
+
+    <label for="comment">Bình Luận:</label>
+    <textarea id="comment" name="comment" required></textarea>
+
+    <input type="submit" value="Gửi Đánh Giá">
+  </form>
+</div>
+
+</body>
+</html>
